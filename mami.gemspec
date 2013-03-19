@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Mami::VERSION
   spec.authors       = ["sanemat"]
   spec.email         = ["o.gata.ken@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{Command for date}
+  spec.summary       = %q{Utility for date}
   spec.homepage      = ""
   spec.license       = "MIT"
 
