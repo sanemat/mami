@@ -3,6 +3,8 @@ require 'thor'
 
 module Mami
   class CLI < Thor
+    default_task :print
+
     desc "version", "Prints the mami's version information"
     def version
       puts "Mami version #{Mami::VERSION}"
