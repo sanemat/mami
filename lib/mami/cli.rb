@@ -15,7 +15,7 @@ module Mami
     def print
       path = ENV['MAMI_DIR']
       return puts "no-mami" unless path
-      puts path + %x[date "+%Y-%m-%d-%H-%M-%S"].chomp + ".txt"
+      puts path + "/" + %x[date "+%Y-%m-%d-%H-%M-%S"].chomp + ".txt"
     end
   end
 end
