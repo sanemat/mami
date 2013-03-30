@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require 'mami'
+
+Mami::CLI.start
