@@ -12,10 +12,12 @@ module Mami
     map %w(-v --version) => :version
 
     desc "print", "Prints timestamped text file path"
+    method_option :extension, default: 'txt', aliases: '--ext', desc: 'Set extension, if nil, then no extension'
     def print
       path = ENV['MAMI_DIR']
       return puts "no-mami" unless path
-      puts path + "/" + %x[date "+%Y-%m-%d-%H-%M-%S"].chomp + ".txt"
+      extension = options[:extension].nil? ? nil : '.' + options[:extension]
+      puts [path, "/", %x[date "+%Y-%m-%d-%H-%M-%S"].chomp, extension].compact.join
     end
   end
 end
