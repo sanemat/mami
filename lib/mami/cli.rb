@@ -17,10 +17,11 @@ module Mami
     def print
       path = options[:directory] || ENV['MAMI_DIR']
       return puts "no-mami" unless path
+      fullpath = File.expand_path(path)
       basename = %x[date "+%Y-%m-%d-%H-%M-%S"].chomp
       extension = options[:extension].nil? ? nil : '.' + options[:extension]
       filename = [basename, extension].compact.join
-      puts File.join(path, filename)
+      puts File.join(fullpath, filename)
     end
   end
 end
