@@ -13,8 +13,9 @@ module Mami
 
     desc "print", "Prints timestamped text file path"
     method_option :extension, default: 'txt', aliases: '--ext', desc: 'Set extension, if nil, then no extension'
+    method_option :directory, default: nil, aliases: '-d', desc: 'Set directory. if nil, then use MAMI_DIR'
     def print
-      path = ENV['MAMI_DIR']
+      path = options[:directory] || ENV['MAMI_DIR']
       return puts "no-mami" unless path
       extension = options[:extension].nil? ? nil : '.' + options[:extension]
       puts [path, "/", %x[date "+%Y-%m-%d-%H-%M-%S"].chomp, extension].compact.join
