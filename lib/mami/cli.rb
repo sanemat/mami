@@ -3,6 +3,7 @@ require 'thor'
 
 module Mami
   class CLI < Thor
+    check_unknown_options!
     default_task :print
 
     desc "version", "Prints the mami's version information"
