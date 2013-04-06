@@ -1,24 +1,18 @@
 # Mami
 
-TODO: Write a gem description
+Show timestamped file name.
+
+[![Build Status](https://api.travis-ci.org/sanemat/mami.png?branch=master)](https://travis-ci.org/sanemat/mami)
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-    gem 'mami'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
+Install it yourself as:
 
     $ gem install mami
 
 ## Usage
 
-TODO: Write usage instructions here
+    $ mami
 
 ## Contributing
 
