@@ -23,6 +23,7 @@ $debug    = false
 $show_err = true
 
 RSpec.configure do |config|
+  config.include Spec::Path
   config.include Spec::Helpers
 
   original_wd       = Dir.pwd

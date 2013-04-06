@@ -8,7 +8,7 @@ module Spec
     attr_reader :out, :err, :exitstatus
 
     def in_app_root(&blk)
-      Dir.chdir(bundled_app, &blk)
+      Dir.chdir(app, &blk)
     end
 
     def mami(cmd, options = {})
