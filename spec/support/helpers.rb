@@ -11,6 +11,10 @@ module Spec
       Dir.chdir(app, &blk)
     end
 
+    def lib
+      File.expand_path('../../../lib', __FILE__)
+    end
+
     def mami(cmd, options = {})
       mami_bin = File.expand_path('../../../bin/mami', __FILE__)
       options.merge!(my_command_bin: mami_bin)
