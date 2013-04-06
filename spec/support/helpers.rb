@@ -7,6 +7,10 @@ module Spec
 
     attr_reader :out, :err, :exitstatus
 
+    def in_app_root(&blk)
+      Dir.chdir(bundled_app, &blk)
+    end
+
     def sys_exec(cmd, expect_err = false)
       Open3.popen3(cmd.to_s) do |stdin, stdout, stderr|
         @in_p, @out_p, @err_p = stdin, stdout, stderr
