@@ -16,10 +16,10 @@ module Mami
     method_option :extension, default: 'txt', aliases: '--ext', desc: 'Set extension, if nil, then no extension'
     method_option :directory, default: nil, aliases: '-d', desc: 'Set directory. if nil, then use MAMI_DIR'
     def print(opt = {})
-      current = opt[:current] || Time.now
+      time = opt[:time] || Time.now
       path = options[:directory] || ENV['MAMI_DIR']
       abort("mami requires MAMI_DIR or directory option") unless path
-      basename = current.strftime('%Y-%m-%d-%H-%M-%S')
+      basename = time.strftime('%Y-%m-%d-%H-%M-%S')
       extension = options[:extension].nil? ? nil : '.' + options[:extension]
       filename = [basename, extension].compact.join
       puts File.join(path, filename)
