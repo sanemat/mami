@@ -15,7 +15,8 @@ module Mami
     desc "print", "Prints timestamped text file path"
     method_option :extension, default: 'txt', aliases: '--ext', desc: 'Set extension, if nil, then no extension'
     method_option :directory, default: nil, aliases: '-d', desc: 'Set directory. if nil, then use MAMI_DIR'
-    def print(current: Time.now)
+    def print(opt = {})
+      current = opt[:current] || Time.now
       path = options[:directory] || ENV['MAMI_DIR']
       abort("mami requires MAMI_DIR or directory option") unless path
       basename = current.strftime('%Y-%m-%d-%H-%M-%S')
