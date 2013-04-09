@@ -12,7 +12,21 @@ Install it yourself as:
 
 ## Usage
 
-    $ mami
+    Usage:
+     $ mami #=> /path/to/mami/2013-04-09-21-46-43.txt
+
+    Use cases:
+     (On vim command mode)
+     :w `mami`
+     #=> save text to /path/to/mami/2013-04-09-22-06-12.txt
+
+     $ some_command > `mami --extension log -d .`
+     #=> Write stdout to ./2013-04-09-22-07-08.log
+
+    Commands:
+     mami help [TASK]  # Describe available tasks or one specific task
+     mami print        # Prints timestamped text file path
+     mami version      # Prints the mami's version information
 
 ## Contributing
 
