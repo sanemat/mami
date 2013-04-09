@@ -14,6 +14,6 @@ describe 'common case' do
 
   it 'returns common output' do
     mami ''
-    expect(out).to eq('/path/to/mami/2011-08-28-12-34-56.txt')
+    expect(out).to match(%r!/path/to/mami/\d{4}-\d{2}-\d{2}-\d{2}-\d{2}-\d{2}\.txt!)
   end
 end
