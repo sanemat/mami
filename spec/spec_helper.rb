@@ -42,5 +42,6 @@ RSpec.configure do |config|
 
     Dir.chdir(original_wd)
     # Reset ENV
+    ENV['MAMI_DIR'] = nil
   end
 end
