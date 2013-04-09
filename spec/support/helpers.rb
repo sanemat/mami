@@ -25,7 +25,6 @@ module Spec
       expect_err  = options.delete(:expect_err)
       exitstatus = options.delete(:exitstatus)
       my_command_bin = options.delete(:my_command_bin)
-      options["no-color"] = true unless options.key?("no-color") || %w(exec conf).include?(cmd.to_s[0..3])
 
       requires = options.delete(:requires) || []
       requires_str = requires.map{|r| "-r#{r}"}.join(" ")
