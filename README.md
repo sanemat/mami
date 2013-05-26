@@ -4,8 +4,6 @@
 
 Show timestamped file name.
 
-[![Build Status](https://api.travis-ci.org/sanemat/mami.png?branch=master)](https://travis-ci.org/sanemat/mami)
-
 ## Installation
 
 Install it yourself as:
