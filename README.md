@@ -1,6 +1,10 @@
 # Mami
 
-[![Build Status](https://api.travis-ci.org/sanemat/mami.png?branch=master)](https://travis-ci.org/sanemat/mami) [![Code Climate](https://codeclimate.com/github/sanemat/mami.png)](https://codeclimate.com/github/sanemat/mami) [![Coverage Status](https://coveralls.io/repos/sanemat/mami/badge.png?branch=master)](https://coveralls.io/r/sanemat/mami)
+[![Gem Version](https://badge.fury.io/rb/mami.png)](http://badge.fury.io/rb/mami)
+[![Build Status](https://api.travis-ci.org/sanemat/mami.png?branch=master)](https://travis-ci.org/sanemat/mami)
+[![Code Climate](https://codeclimate.com/github/sanemat/mami.png)](https://codeclimate.com/github/sanemat/mami)
+[![Coverage Status](https://coveralls.io/repos/sanemat/mami/badge.png?branch=master)](https://coveralls.io/r/sanemat/mami)
+[![Dependency Status](https://gemnasium.com/sanemat/mami.png)](https://gemnasium.com/sanemat/mami)
 
 Show timestamped file name.
 
